@@ -33,7 +33,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'airblade/vim-gitgutter'
 Plug '907th/vim-auto-save'
 Plug 'preservim/nerdtree'
-
+Plug 'wkentaro-archive/conque.vim'
 
 call plug#end()
 
