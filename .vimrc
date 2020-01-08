@@ -67,6 +67,3 @@ highlight GitGutterDelete guifg=#ff2222 guibg=<X> ctermfg=1
 
 " vim-auto-save config
 let g:auto_save = 1  " enable AutoSave on Vim startup
-
-" nerdtree config
-autocmd vimenter * NERDTree
