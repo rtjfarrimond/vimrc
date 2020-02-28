@@ -3,10 +3,17 @@ syntax on
 set background=dark
 
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
-set nu
+set nu rnu
 set ruler
 set colorcolumn=80
 set cursorline
+
+" Autowrap at 79 lines
+set tw=79
+
+" Enable spell checker
+set spelllang=en
+set spell
 
 " Automatically read changes to file
 set autoread
@@ -36,6 +43,7 @@ Plug 'airblade/vim-gitgutter'
 Plug '907th/vim-auto-save'
 Plug 'preservim/nerdtree'
 Plug 'wkentaro-archive/conque.vim'
+Plug 'junegunn/vim-easy-align'
 
 call plug#end()
 
@@ -61,12 +69,13 @@ let g:lightline = {
       \ }
 
 " vim-gitgutter config
-highlight GitGutterAdd    guifg=#009900 guibg=<X> ctermfg=2
-highlight GitGutterChange guifg=#bbbb00 guibg=<X> ctermfg=3
-highlight GitGutterDelete guifg=#ff2222 guibg=<X> ctermfg=1
+highlight GitGutterAdd    guifg=#009900 ctermfg=2
+highlight GitGutterChange guifg=#bbbb00 ctermfg=3
+highlight GitGutterDelete guifg=#ff2222 ctermfg=1
 
 " vim-auto-save config
 let g:auto_save = 1  " enable AutoSave on Vim startup
 
-" nerdtree config
-autocmd vimenter * NERDTree
+" Open NERDTree when vim launches - :he autocmd.txt for background on this
+" command
+au VimEnter *  NERDTree
