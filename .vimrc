@@ -76,6 +76,8 @@ highlight GitGutterDelete guifg=#ff2222 ctermfg=1
 " vim-auto-save config
 let g:auto_save = 1  " enable AutoSave on Vim startup
 
-" Open NERDTree when vim launches - :he autocmd.txt for background on this
-" command
-au VimEnter *  NERDTree
+" NERDTree config
+" Show hidden files
+let NERDTreeShowHidden=1
+" Toggle with ctrl + n
+map <C-n> :NERDTreeToggle<CR>
