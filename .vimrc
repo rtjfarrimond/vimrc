@@ -44,6 +44,7 @@ Plug '907th/vim-auto-save'
 Plug 'preservim/nerdtree'
 Plug 'wkentaro-archive/conque.vim'
 Plug 'junegunn/vim-easy-align'
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
@@ -81,3 +82,6 @@ let g:auto_save = 1  " enable AutoSave on Vim startup
 let NERDTreeShowHidden=1
 " Toggle with ctrl + n
 map <C-n> :NERDTreeToggle<CR>
+
+" vim-devicons config
+set encoding=UTF-8
