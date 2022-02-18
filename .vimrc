@@ -1,19 +1,24 @@
 syntax on
 
+" Yank and put from system clipboard
+" https://stackoverflow.com/questions/3961859/how-to-copy-to-clipboard-in-vim
+set clipboard=unnamed
+
 set background=dark
 
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
-set nu rnu
+set nu
+" set rnu
 set ruler
 set colorcolumn=80
 set cursorline
 
 " Autowrap at 79 lines
-set tw=79
+" set tw=79
 
 " Enable spell checker
 set spelllang=en
-set spell
+" set spell
 
 " Automatically read changes to file
 set autoread
@@ -45,6 +50,8 @@ Plug 'preservim/nerdtree'
 Plug 'wkentaro-archive/conque.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'ryanoasis/vim-devicons'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
@@ -82,6 +89,10 @@ let g:auto_save = 1  " enable AutoSave on Vim startup
 let NERDTreeShowHidden=1
 " Toggle with ctrl + n
 map <C-n> :NERDTreeToggle<CR>
+
+" Vim fzf
+" GFiles with ctrl + f
+map <C-f> :GFiles<CR>
 
 " vim-devicons config
 set encoding=UTF-8
