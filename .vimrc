@@ -40,7 +40,7 @@ set undodir=.undo/,~/.undo/,/tmp//
 call plug#begin('~/.vim/plugged')
 
 Plug 'sheerun/vim-polyglot'
-Plug 'valloric/youcompleteme'
+" Plug 'valloric/youcompleteme'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tomtom/tcomment_vim'
@@ -52,8 +52,15 @@ Plug 'junegunn/vim-easy-align'
 Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'rust-lang/rust.vim'
+Plug 'preservim/tagbar'
+Plug 'vim-syntastic/syntastic'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
+
+syntax enable
+filetype plugin indent on
 
 " ymc config
 let g:ycm_autoclose_preview_window_after_insertion = 1
@@ -84,6 +91,9 @@ highlight GitGutterDelete guifg=#ff2222 ctermfg=1
 " vim-auto-save config
 let g:auto_save = 1  " enable AutoSave on Vim startup
 
+" Automatically format rust code on save
+let g:rustfmt_autosave = 1
+
 " NERDTree config
 " Show hidden files
 let NERDTreeShowHidden=1
@@ -96,3 +106,12 @@ map <C-f> :GFiles<CR>
 
 " vim-devicons config
 set encoding=UTF-8
+
+" Syntastic recommended settings for new users
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
